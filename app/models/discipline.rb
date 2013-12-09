@@ -1,4 +1,6 @@
 class Discipline < ActiveRecord::Base
+  has_many :lessons
+
   validates :title, presence: true
 
   def to_s

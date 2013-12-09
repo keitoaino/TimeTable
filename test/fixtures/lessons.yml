@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group_id: 1
+  discipline_id: 1
+  lesson_type: 1
+  lector_id: 1
+  hours: 1
+  room_id: 1
+  index: 1
+
+two:
+  group_id: 1
+  discipline_id: 1
+  lesson_type: 1
+  lector_id: 1
+  hours: 1
+  room_id: 1
+  index: 1

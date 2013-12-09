@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131209202618) do
+ActiveRecord::Schema.define(version: 20131209215949) do
 
   create_table "disciplines", force: true do |t|
     t.string   "title"
@@ -32,6 +32,18 @@ ActiveRecord::Schema.define(version: 20131209202618) do
     t.datetime "updated_at"
   end
 
+  create_table "lessons", force: true do |t|
+    t.integer  "group_id"
+    t.integer  "discipline_id"
+    t.integer  "lesson_type"
+    t.integer  "lector_id"
+    t.integer  "hours"
+    t.integer  "room_id"
+    t.integer  "index"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
     t.string   "username"
@@ -44,6 +56,13 @@ ActiveRecord::Schema.define(version: 20131209202618) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories", using: :btree
+
+  create_table "rooms", force: true do |t|
+    t.string   "title"
+    t.integer  "capacity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
